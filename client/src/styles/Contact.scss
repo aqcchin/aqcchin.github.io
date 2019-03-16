@@ -1,0 +1,9 @@
+$colors: (
+  text: #000000
+);
+
+div.container {
+  border: 1px solid green;
+  margin: 1em 0;
+  color: map-get($colors, text);
+}

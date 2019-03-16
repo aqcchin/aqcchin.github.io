@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', 'Arial', 'Helvetica';
+  margin: 0; 
+  background-color: #949bff;
+  background-image: url('https://source.unsplash.com/FBZB7cMZpTI');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#root {
+  // position: relative;
+  text-align: center;
+  // background-color: rgb(158, 97, 255);
+  // z-index: 0;
+}
+
+#header {
+  // position: relative;
+  // z-index: 2;
+}
+
+#main {
+  // position: absolute;
+  // z-index: -1;
+  // top: 0px;
+  // left: 0px;
+}
+
+#footer {
+  // position: absolute;
+  // z-index: -1;
+}

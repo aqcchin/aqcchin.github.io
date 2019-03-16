@@ -1,0 +1,36 @@
+$colors: (
+  header: #2b39f8,
+  text: #000000
+);
+
+@function color($value) {
+  @return map-get($colors, $value)
+};
+
+
+div.container {
+  color: color(text);
+  margin: 1em 0;
+  // padding: 0 2.5em;
+  
+  h1 {
+    font-weight: normal;
+    font-size: 2em;
+    color: color(header);
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(92, 64, 255, 1), rgba(0, 0, 0, 0));
+  }
+
+  .content {
+    font-size: 1.2em;
+  }
+
+  .link {
+    color: color(header);
+  }
+}

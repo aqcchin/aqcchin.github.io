@@ -1,0 +1,84 @@
+$colors: (
+  header: #2b39f8,
+  text: #000000,
+  subtext: #797979
+);
+
+@function color($value) {
+  @return map-get($colors, $value)
+};
+
+$maxWidth: 768px;
+
+@mixin responsive {
+  @media screen and (max-width: #{$maxWidth}) {
+    @content;
+  }
+}
+
+div.container {
+  // border: 1px solid blue;
+  margin: 1em 0;
+  // padding: 0 2.5em;
+  color: map-get($colors, text);
+  font-size: 1.2em;
+
+  h1 {
+    font-weight: normal;
+    font-size: 2em;
+    color: color(header);
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(92, 64, 255, 1), rgba(0, 0, 0, 0));
+  }
+}
+
+div#grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include responsive {
+    flex-direction: column;
+  }
+}
+
+div.panel {
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+  padding: 1em;
+  border-radius: 2px;
+
+  h2 {
+    font-weight: normal;
+    margin: 0.5em 0;
+  }
+  
+  p.description {
+    font-size: 1em;
+    color: color(subtext);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include responsive {
+    margin: 0.5em;
+    padding: 0.5em;
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    p.description {
+      font-size: 0.8em;
+    }
+  }
+}
+
